@@ -14,8 +14,9 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background-color: #3b784ed3;
+    background-color: #425b719f;
     padding: 25px;
+    width:80;
 }
 header a{
     margin: 0 15px 0 15px;
@@ -148,7 +149,7 @@ h2{
     border: 1px solid white;
     border-radius: 10px;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
