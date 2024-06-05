@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Viajes y Planeacion</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            CALIDAVIA 
+        </a>
+        <nav>
+            <div class="links">
+                <a href="#opciones">Registra tu alojamiento</a>
+                <a href="#Ofertas">Ofertas especiales</a>
+                <a href="#Descubre">Descubre</a>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="PAGE">
+        <img src="logo.png" alt="">
+    </section>
+
+    
+    <div id="opciones" class="OpcionesBarra">
+        <div class="OpcionUNO">
+            <div class="image">
+                <img src="cama.png" alt="" width="50px" height="50px">
+            </div>
+            <h2>Hoteles</h2>
+            <p>Los hoteles que nuestro servicio ofrece van a depender al presupuesto que el cliente mencione en el respectivo apartado, el listado de hospedajes seran mostrados dependiendo el rango de presupuesto</p>
+        </div>
+
+        <div class="OpcionDOS">
+            <div class="image">
+                <img src="tarifaBN.png" alt="" width="50px" height="50px">
+            </div>
+            <h2>Tarifas</h2>
+            <p>Las tarifas mostradas en nuestra pagina va a depender de la calidad de el hospedaje seleccionado tratando de respetar el presupuesto mencionado.  </p>
+        </div>
+
+        <div class="OpcionTRES">
+            <div class="image">
+                <img src="transporteBN.png" alt="" width="50px" height="50px">              
+            </div>
+            <h2>Transporte</h2>
+            <p>La pagina muestra las facilidades de tranporte por hospedaje seleccionado, en este se toman en cuenta varios aspectos como la cercania a paradas de bus, estaciones de metro y alquilires de coches.</p>
+        </div>
+
+        <div class="OpcionCuatro">
+            <div class="image">
+                <img src="ubicacionBN.png" alt="" width="50px" height="50px">
+            </div>
+            <h2 style="text-align: center; font-size: 30px;">Lugares</h2>
+            <p style="text-align: justify;">En el hospedaje seleccionado va a venir incluido un listado de lugaras que podrian ser de tu interes, tanto como lugares turisticos como lugares urbanos donde se puede ver la cultura del lugar</p>
+        </div>
+
+    </div>
+
+
+    <section id="search-section">
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <select id="destination">
+                    <option value="" disabled selected>¿Adónde vas?</option>
+                    <option value="paris">París</option>
+                    <option value="londres">Londres</option>
+                    <option value="tokio">Tokio</option>
+                    <option value="nueva-york">Nueva York</option>
+                    <option value="sydney">Sídney</option>
+                </select>
+                <input type="date" id="checkin">
+                <input type="date" id="checkout">
+                <div class="guests">
+                    <span id="guests-text">2 adultos · 0 niños · 1 habitación</span>
+                    <div class="guests-dropdown" id="guests-dropdown">
+                        <label>
+                            Adultos:
+                            <input type="number" id="adults" value="2" min="1">
+                        </label>
+                        <label>
+                            Niños:
+                            <input type="number" id="children" value="0" min="0">
+                        </label>
+                        <label>
+                            Habitaciones:
+                            <input type="number" id="rooms" value="1" min="1">
+                        </label>
+                    </div>
+                </div>
+                <button id="search-button">Buscar</button>
+            </div>
+            <label>
+                <input type="checkbox" id="work-travel"> Viajo por trabajo
+            </label>
+            <div id="search-message" class="hidden">Buscando la mejor opción para su hospedaje...</div>
+        </div>
+    </section>
+
+    <div id="Ofertas" class="OFERTAS">
+        <div class="Link_oferta">       
+            <h1>OFERTAS ESPECIALES</h1>
+        </div>
+        <div class="Ver_mas">  
+            <a href="index2.html">Ver mas ofertas</a>
+        </div>
+    </div>
+
+    <h2 id="Descubre">Descubre Guatemala</h2>
+<div class="container-wrapper">
+    <div class="OpcionesBarra2" id="cardContainer">        
+        <div class="card">
+            <img src="Tikal.jpg" alt="Parque Tikal">
+            <div class="card-content">
+                <h2 class="card-title" style="text-align: center;">Parque Nacional Tikal</h2>
+                <p class="card-location">Fue establecido como Parque Nacional en 1955, sitio donde se encuentra la más extensa y monumental ciudad maya, con gran importancia cultural y natural</p>
+                <div class="card-rating">
+                    <div class="rating-number">9.3</div>
+                    <span>Lugar turistico</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="antiguGua.jpg" alt="Parque Tikal">
+            <div class="card-content">
+                <h2 class="card-title" style="text-align: center;">Antigua Guatemala</h2>
+                <p class="card-location">Esta bella y mágica ciudad colonial guarda casi quinientos años de historia, con un clima privilegiado y una excepcional vista hacia los volcanes de Fuego y Acatenango</p>
+                <div class="card-rating">
+                    <div class="rating-number">9.3</div>
+                    <span>Lugar turistico</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="SanFelipe.jpg" alt="Parque Tikal">
+            <div class="card-content">
+                <h2 class="card-title" style="text-align: center;">Castillo San Felipe</h2>
+                <p class="card-location"> En la actualidad es uno de los sitios turísticos más importantes de la zona, cuenta con servicio de guías, y además este monumento forma parte de un corredor de castillos en las costas del Atlántico</p>
+                <div class="card-rating">
+                    <div class="rating-number">9.3</div>
+                    <span>Lugar turistico</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="cruz.jpg" alt="Parque Tikal">
+            <div class="card-content">
+                <h2 class="card-title" style="text-align: center;">Cerro de la Cruz </h2>
+                <p class="card-location">Es una pequeña montaña que podemos encontrar cerca de la ciudad de Antigua Guatemala. Su nombre actual es debido a una cruz que custodia la ciudad</p>
+                <div class="card-rating">
+                    <div class="rating-number">9.3</div>
+                    <span>Lugar turistico</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="zoo.jpg" alt="Parque Tikal">
+            <div class="card-content">
+                <h2 class="card-title" style="text-align: center;">Zoológico La Aurora</h2>
+                <p class="card-location">Es uno de los jardines más grandes de la ciudad; con 287 especies y más de 2,500 animales en toda la colección, el zoológico tiene diferentes áreas divididas por continentes, dentro de los cuales está África, Asia, América y Oceanía.</p>
+                <div class="card-rating">
+                    <div class="rating-number">9.3</div>
+                    <span>Lugar turistico</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="irtra.jpg" alt="Parque Tikal">
+            <div class="card-content">
+                <h2 class="card-title" style="text-align: center;">IRTRA Mundo Petapa</h2>
+                <p class="card-location">En Mundo Petapa encontrarás diversión y felicidad extrema. Este parque fue inaugurado el 26 de marzo de 1976</p>
+                <div class="card-rating">
+                    <div class="rating-number">9.3</div>
+                    <span>Lugar turistico</span>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <button class="arrow-btn arrow-btn-left" id="prevBtn">&lt;</button>
+    <button class="arrow-btn arrow-btn-right" id="nextBtn">&gt;</button>
+</div>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Contactos</h3>
+            <p>Teléfono: +502 5894 3248</p>
+            <p>Email: calidavia_contacto@ejemplo.com</p>
+        </div>
+        <div class="footer-section">
+            <h3>Redes Sociales</h3>
+            <ul class="social-media">
+                <li><a href="#"> Facebook</a></li>
+                <li><a href="#"> Twitter</a></li>
+                <li><a href="#"> Instagram</a></li>
+                <li><a href="#"> LinkedIn</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Información Adicional</h3>
+            <p><a href="#">Política de Privacidad</a></p>
+            <p><a href="#">Términos y Condiciones</a></p>
+            <p><a href="#">FAQ</a></p>
+        </div>
+    </div>
+</footer>
+
+
+
+        <script>
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const cardContainer = document.getElementById('cardContainer');
+
+            let currentIndex = 0;
+
+            function updateButtons() {
+                prevBtn.disabled = currentIndex === 0;
+                nextBtn.disabled = currentIndex === cardContainer.querySelectorAll('.card').length - 1;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                const cards = cardContainer.querySelectorAll('.card');
+                const cardWidth = cards[0].offsetWidth + 20; // 20px es el margen derecho
+
+                if (currentIndex < cards.length - 1) {
+                    currentIndex++;
+                    cardContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+                }
+                updateButtons();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                const cards = cardContainer.querySelectorAll('.card');
+                const cardWidth = cards[0].offsetWidth + 20; // 20px es el margen derecho
+
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    cardContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+                }
+                updateButtons();
+            });
+
+            updateButtons(); // Initialize button states on load
+
+
+        </script>
+    <script src="Barrabusqueda.js"></script>
+</body>
+</html>

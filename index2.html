@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Quedate</title>
+</head>
+<body>
+
+
+    <header>
+        <a href="index.html">
+            CALIDAVIA 
+        </a>
+        <nav>
+            <div class="links">
+                <a href="#opciones">Registra tu alojamiento</a>
+                <a href="">Hazte una cuenta</a>
+                <a href="">Iniciar sesión</a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="AbajoHeader">
+        <h2>Las ofertas que te ofrecemos</h2>
+    </div>
+
+    <div class="BotonesLogo">
+        <div class="Playa">
+            <a> <img src="playa.png" alt="">Playa</a>
+        </div>
+
+        <div class="Playa">
+            <a> <img src="ciudad.png" alt="">Ciudad</a>
+        </div>
+
+        <div class="Playa">
+            <a> <img src="aire libre.png" alt ="">Aire Libre</a>
+        </div>
+
+    </div>
+
+
+    <div class="container-wrapper">
+    <div class="OpcionesBarra2" id="cardContainer">        
+        <div class="card">
+            <img src="Tikal.jpg" alt="Parque Tikal">
+            <div class="card-content">
+                <h2 class="card-title" style="text-align: center;">Parque Nacional Tikal</h2>
+                <p class="card-location">Fue establecido como Parque Nacional en 1955, sitio donde se encuentra la más extensa y monumental ciudad maya, con gran importancia cultural y natural</p>
+                <div class="card-rating">
+                    <div class="rating-number">9.3</div>
+                    <span>Lugar turistico</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="antiguGua.jpg" alt="Parque Tikal">
+            <div class="card-content">
+                <h2 class="card-title" style="text-align: center;">Antigua Guatemala</h2>
+                <p class="card-location">Esta bella y mágica ciudad colonial guarda casi quinientos años de historia, con un clima privilegiado y una excepcional vista hacia los volcanes de Fuego y Acatenango</p>
+                <div class="card-rating">
+                    <div class="rating-number">9.3</div>
+                    <span>Lugar turistico</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="SanFelipe.jpg" alt="Parque Tikal">
+            <div class="card-content">
+                <h2 class="card-title" style="text-align: center;">Castillo San Felipe</h2>
+                <p class="card-location"> En la actualidad es uno de los sitios turísticos más importantes de la zona, cuenta con servicio de guías, y además este monumento forma parte de un corredor de castillos en las costas del Atlántico</p>
+                <div class="card-rating">
+                    <div class="rating-number">9.3</div>
+                    <span>Lugar turistico</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="cruz.jpg" alt="Parque Tikal">
+            <div class="card-content">
+                <h2 class="card-title" style="text-align: center;">Cerro de la Cruz </h2>
+                <p class="card-location">Es una pequeña montaña que podemos encontrar cerca de la ciudad de Antigua Guatemala. Su nombre actual es debido a una cruz que custodia la ciudad</p>
+                <div class="card-rating">
+                    <div class="rating-number">9.3</div>
+                    <span>Lugar turistico</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="zoo.jpg" alt="Parque Tikal">
+            <div class="card-content">
+                <h2 class="card-title" style="text-align: center;">Zoológico La Aurora</h2>
+                <p class="card-location">Es uno de los jardines más grandes de la ciudad; con 287 especies y más de 2,500 animales en toda la colección, el zoológico tiene diferentes áreas divididas por continentes, dentro de los cuales está África, Asia, América y Oceanía.</p>
+                <div class="card-rating">
+                    <div class="rating-number">9.3</div>
+                    <span>Lugar turistico</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="irtra.jpg" alt="Parque Tikal">
+            <div class="card-content">
+                <h2 class="card-title" style="text-align: center;">IRTRA Mundo Petapa</h2>
+                <p class="card-location">En Mundo Petapa encontrarás diversión y felicidad extrema. Este parque fue inaugurado el 26 de marzo de 1976</p>
+                <div class="card-rating">
+                    <div class="rating-number">9.3</div>
+                    <span>Lugar turistico</span>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <button class="arrow-btn arrow-btn-left" id="prevBtn">&lt;</button>
+    <button class="arrow-btn arrow-btn-right" id="nextBtn">&gt;</button>
+</div>
+
+    <script>
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const cardContainer = document.getElementById('cardContainer');
+
+            let currentIndex = 0;
+
+            function updateButtons() {
+                prevBtn.disabled = currentIndex === 0;
+                nextBtn.disabled = currentIndex === cardContainer.querySelectorAll('.card').length - 1;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                const cards = cardContainer.querySelectorAll('.card');
+                const cardWidth = cards[0].offsetWidth + 20; // 20px es el margen derecho
+
+                if (currentIndex < cards.length - 1) {
+                    currentIndex++;
+                    cardContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+                }
+                updateButtons();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                const cards = cardContainer.querySelectorAll('.card');
+                const cardWidth = cards[0].offsetWidth + 20; // 20px es el margen derecho
+
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    cardContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+                }
+                updateButtons();
+            });
+
+            updateButtons(); // Initialize button states on load
+
+
+        </script>
+
+
+
+
+<!-- <script>
+    const nextBtn2 = document.getElementById('nextBtn');
+    const prevBtn2= document.getElementById('prevBtn');
+    const cardContainer2 = document.getElementById('cardContainer');
+
+    let currentIndex2 = 0;
+
+    function updateButtons2() {
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === cardContainer.querySelectorAll('.card').length - 1;
+    }
+
+    nextBtn.addEventListener2('click', () => {
+        const cards2 = cardContainer.querySelectorAll('.card');
+        const cardWidth2 = cards[0].offsetWidth + 20; // 20px es el margen derecho
+
+        if (currentIndex < cards.length - 1) {
+            currentIndex++;
+            cardContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        }
+        updateButtons();
+    });
+
+    prevBtn.addEventListener2('click', () => {
+        const cards2 = cardContainer.querySelectorAll('.card');
+        const cardWidth2 = cards[0].offsetWidth + 20; // 20px es el margen derecho
+
+        if (currentIndex > 0) {
+            currentIndex--;
+            cardContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        }
+        updateButtons();
+    });
+
+    updateButtons(); // Initialize button states on load
+
+
+</script>
+
+
+
+
+
+
+<script>
+    const nextBtn3 = document.getElementById('nextBtn3');
+    const prevBtn3 = document.getElementById('prevBtn3');
+    const cardContainer3 = document.getElementById('cardContainer3');
+
+    let currentIndex3 = 0;
+
+    function updateButtons3() {
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === cardContainer.querySelectorAll('.card').length - 1;
+    }
+
+    nextBtn.addEventListener3('click', () => {
+        const cards3 = cardContainer.querySelectorAll('.card');
+        const cardWidth3 = cards[0].offsetWidth + 20; // 20px es el margen derecho
+
+        if (currentIndex < cards.length - 1) {
+            currentIndex++;
+            cardContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        }
+        updateButtons();
+    });
+
+    prevBtn.addEventListener3('click', () => {
+        const cards3 = cardContainer.querySelectorAll('.card');
+        const cardWidth3 = cards[0].offsetWidth + 20; // 20px es el margen derecho
+
+        if (currentIndex > 0) {
+            currentIndex--;
+            cardContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        }
+        updateButtons();
+    });
+
+    // // updateButtons(); // Initialize button states on load
+
+
+</script> -->
+
+</body>
+</html>
